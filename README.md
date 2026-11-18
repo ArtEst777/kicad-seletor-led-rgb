@@ -12,17 +12,17 @@ A seleção de cor é feita no lado do cátodo (*low-side switching*) por meio d
 
 ---
 
-## Lista de Materiais (BOM)
+## Lista de Materiais (BOM) e Datasheets
 
-| Referência | Componente / Valor | Footprint (KiCad) | Descrição |
-| :--- | :--- | :--- | :--- |
-| **J1** | `Barrel_Jack` | `Connector_BarrelJack:BarrelJack_Horizontal` | Conector de alimentação DC Barrel Jack Horizontal |
-| **D1** | `SS12` | `Diode_SMD:D_SMA` | Diodo Schottky 20V 1A (DO-214AC / SMA) — Proteção de polaridade |
-| **D3** | `APFA3010` | `LED_SMD:LED_Kingbright_APFA3010_3x1.5mm_Horizontal` | LED RGB SMD Right-Angle (3.0 x 1.5 x 1.0 mm), Ânodo Comum |
-| **R1** | `330 Ω` | `Resistor_SMD:R_0805_2012Metric` | Resistor SMD 0805 — Limitador de corrente do canal **Vermelho (R)** |
-| **R2** | `220 Ω` | `Resistor_SMD:R_0805_2012Metric` | Resistor SMD 0805 — Limitador de corrente do canal **Verde (G)** |
-| **R3** | `220 Ω` | `Resistor_SMD:R_0805_2012Metric` | Resistor SMD 0805 — Limitador de corrente do canal **Azul (B)** |
-| **SW2** | `SW_SP3T_PCM13` | `Button_Switch_SMD:SW_SP3T_PCM13` | Chave deslizante SMD de 3 posições (Ultraminiature Slide Switch) |
+| Referência | Componente / Valor | Footprint (KiCad) | Descrição | Datasheet |
+| :--- | :--- | :--- | :--- | :--- |
+| **J1** | `Barrel_Jack` | `Connector_BarrelJack:BarrelJack_Horizontal` | Conector de alimentação DC Barrel Jack Horizontal (`24V / 2.5A`) | [BarrelJack_PJ-002A.pdf](Datasheets/BarrelJack_PJ-002A.pdf) |
+| **D1** | `SS12` | `Diode_SMD:D_SMA` | Diodo Schottky `20V 1A` (DO-214AC / SMA) — Proteção de polaridade | [SS12.pdf](Datasheets/SS12.pdf) |
+| **D3** | `APFA3010` | `LED_SMD:LED_Kingbright_APFA3010_3x1.5mm_Horizontal` | LED RGB SMD Right-Angle (`3.0 x 1.5 x 1.0 mm`), Ânodo Comum | [APFA3010LSEEZGKQBKC.pdf](Datasheets/APFA3010LSEEZGKQBKC.pdf) |
+| **R1** | `330 Ω` | `Resistor_SMD:R_0805_2012Metric` | Resistor SMD 0805 (`1/8 W`) — Limitador do canal **Vermelho (R)** | [R_0805_RC_Series.pdf](Datasheets/R_0805_RC_Series.pdf) |
+| **R2** | `220 Ω` | `Resistor_SMD:R_0805_2012Metric` | Resistor SMD 0805 (`1/8 W`) — Limitador do canal **Verde (G)** | [R_0805_RC_Series.pdf](Datasheets/R_0805_RC_Series.pdf) |
+| **R3** | `220 Ω` | `Resistor_SMD:R_0805_2012Metric` | Resistor SMD 0805 (`1/8 W`) — Limitador do canal **Azul (B)** | [R_0805_RC_Series.pdf](Datasheets/R_0805_RC_Series.pdf) |
+| **SW2** | `SW_SP3T_PCM13` | `Button_Switch_SMD:SW_SP3T_PCM13` | Chave deslizante SMD de 3 posições (`0.3A @ 6VDC`, C&K PCM13) | [SW_SP3T_PCM13.pdf](Datasheets/SW_SP3T_PCM13.pdf) |
 
 ---
 
@@ -59,9 +59,20 @@ Com base no [datasheet do LED Kingbright APFA3010LSEEZGKQBKC](Datasheets/APFA301
 ├── 3_Leds.kicad_sch                  # Esquemático eletrônico
 ├── 3_Leds.kicad_pcb                  # Layout da PCB
 ├── Datasheets/
-│   └── APFA3010LSEEZGKQBKC.pdf       # Datasheet do LED RGB Kingbright
+│   ├── APFA3010LSEEZGKQBKC.pdf       # Datasheet do LED RGB Kingbright (D3)
+│   ├── BarrelJack_PJ-002A.pdf        # Datasheet do conector Barrel Jack DC (J1)
+│   ├── R_0805_RC_Series.pdf          # Datasheet dos resistores SMD 0805 Yageo (R1, R2, R3)
+│   ├── SS12.pdf                      # Datasheet do diodo Schottky Vishay SS12 (D1)
+│   └── SW_SP3T_PCM13.pdf             # Datasheet da chave deslizante C&K PCM13 (SW2)
+├── LICENSE                           # Licença MIT
 └── README.md                         # Documentação do projeto
 ```
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ---
 
