@@ -2,6 +2,8 @@
 
 Projeto de placa de circuito impresso (PCB) desenvolvido no **KiCad 10.0** para acionamento e seleção manual das cores de um **LED RGB SMD de Ânodo Comum** (`APFA3010LSEEZGKQBKC`), utilizando uma chave deslizante de 3 posições e proteção contra inversão de polaridade na alimentação DC.
 
+![Visualização 3D da PCB](Imagens/PCB%20-%20Visualização%203D.png)
+
 ---
 
 ## Visão Geral do Circuito
@@ -9,6 +11,9 @@ Projeto de placa de circuito impresso (PCB) desenvolvido no **KiCad 10.0** para 
 O circuito recebe alimentação contínua através de um conector **Barrel Jack DC (`J1`)**. A linha positiva passa por um diodo Schottky **`SS12` (`D1`)** para proteção contra inversão de polaridade e alimenta o pino de ânodo comum do LED RGB **`APFA3010` (`D3`)**.
 
 A seleção de cor é feita no lado do cátodo (*low-side switching*) por meio de uma chave deslizante SMD de 3 posições (**`SW2`**), que conecta o barramento de `GND` a um dos três resistores limitadores de corrente (**`R1`**, **`R2`** ou **`R3`**), acionando individualmente o canal **Vermelho (R)**, **Verde (G)** ou **Azul (B)**.
+
+### Esquemático Eletrônico
+![Esquemático do Circuito](Imagens/Esquemático.png)
 
 ---
 
@@ -40,7 +45,7 @@ Com base no [datasheet do LED Kingbright APFA3010LSEEZGKQBKC](Datasheets/APFA301
 
 ---
 
-## Especificações da PCB
+## Especificações e Layout da PCB
 
 * **Dimensões**: `27.5 mm x 29.0 mm` (bordas arredondadas com raio de `1.0 mm`).
 * **Camadas**: 2 camadas (`F.Cu` para roteamento de sinais e componentes SMD; `B.Cu` com plano de terra `GND` contínuo).
@@ -49,6 +54,9 @@ Com base no [datasheet do LED Kingbright APFA3010LSEEZGKQBKC](Datasheets/APFA301
   * Largura de trilha: `0.2 mm`
   * Isolação (*clearance*): `0.2 mm`
   * Vias: Diâmetro `0.6 mm` / Furo `0.3 mm`
+
+### Roteamento 2D da PCI
+![Layout 2D da PCI](Imagens/PCI.png)
 
 ---
 
@@ -64,6 +72,10 @@ Com base no [datasheet do LED Kingbright APFA3010LSEEZGKQBKC](Datasheets/APFA301
 │   ├── R_0805_RC_Series.pdf          # Datasheet dos resistores SMD 0805 Yageo (R1, R2, R3)
 │   ├── SS12.pdf                      # Datasheet do diodo Schottky Vishay SS12 (D1)
 │   └── SW_SP3T_PCM13.pdf             # Datasheet da chave deslizante C&K PCM13 (SW2)
+├── Imagens/
+│   ├── Esquemático.png               # Captura do esquemático eletrônico
+│   ├── PCB - Visualização 3D.png     # Renderização 3D da placa montada
+│   └── PCI.png                       # Captura do roteamento 2D da PCB
 ├── LICENSE                           # Licença MIT
 └── README.md                         # Documentação do projeto
 ```
