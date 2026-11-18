@@ -1,0 +1,17 @@
+# KiCad Local History e Backups
+.history/
+*-backups/
+
+# Arquivos temporários e de sessão do KiCad
+*.kicad_prl
+*.lck
+~*
+_autosave-*
+fp-info-cache
+sym-lib-table.lck
+fp-lib-table.lck
+
+# Relatórios e logs temporários
+report.txt
+*.erc
+*.drc
